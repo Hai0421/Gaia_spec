@@ -1,7 +1,6 @@
 import os
 from os import listdir
 from os.path import isfile, join
-import inspect
 import tempfile
 import warnings
 import numpy as np
@@ -106,8 +105,7 @@ def compare_spectra(sources, plot_spectrum=True, plot_template=True, spectrum_un
     # Load template spectra
     templates = []
 
-    current_path = os.path.dirname(inspect.getfile(inspect.currentframe()))
-    template_dir = os.path.join(current_path, 'templates/')
+    template_dir = 'templates/'
     template_paths = [template_dir + f for f in listdir(template_dir) if isfile(join(template_dir, f))]
 
     for template_path in template_paths:
