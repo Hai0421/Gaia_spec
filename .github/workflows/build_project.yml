@@ -30,7 +30,7 @@ jobs:
       - name: Create output directory
         run: mkdir spec_compare_output
       - name: Run script
-        run: python Spec_compare_exec.py
+        run: python speccomp/Spec_compare_exec.py
       - uses: actions/upload-artifact@v3
         with:
           name: Spec_compare result
